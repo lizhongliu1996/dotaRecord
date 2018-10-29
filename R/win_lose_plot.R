@@ -23,10 +23,12 @@ win_lose_plot<-function(dota2ID){
 
     titles<-c("Your dota2 win/lose graph is below")
     subtitles<-paste("winning rate is", roundp)
+    status<-as.data.frame(winlose$status)
+    number<-as.data.frame(winlose$number)
 
-    ggplot(data=winlose, aes(x=winlose$status, y=winlose$number, fill= winlose$status)) +
+    ggplot(data=winlose, aes(x=status, y=number, fill= status)) +
       geom_bar(stat="identity")+
       labs(title = titles, subtitle = subtitles) +
-      geom_text(aes(label=winlose$number), vjust=1.6, size=10) +
+      geom_text(aes(label=number), vjust=1.6, size=10) +
       guides(fill=FALSE)
 }
