@@ -1,0 +1,13 @@
+Package: dotaRecord
+Type: Package
+Title: describes recently dota2 match win/lose
+Version: 0.1.0
+Author: Lizhong Liu
+Maintainer: Lizhong Liu <lxl816@miami.edu>
+Description: This is a package to analyse your dota2 data.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 2.10)
+RoxygenNote: 6.1.0
+Imports: ROpenDota, ggplot2

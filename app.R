@@ -1,0 +1,46 @@
+library(shiny)
+library(dotaRecord)
+
+
+
+
+ui <- fluidPage(
+
+  h1("This is a shiny webpage to get your dota2 information!"),
+  p("you can input your match ID or your 9 digit dota2 ID"),
+
+  textInput("matchID", label = h3("Please input match ID"), value = NULL),
+  submitButton("confirm", icon("confirm")),
+  verbatimTextOutput("match"),
+
+  textInput("dota2ID", label = h3("Please input your dota2 account ID"), value = NULL ),
+  submitButton("confirm", icon("confirm")),
+  verbatimTextOutput("account"),
+
+  mainPanel(
+    column(6, plotOutput("WinLosePlot", height = 250))
+    )  # end of mainPanel
+
+) #end of ui
+
+server <- function(input, output, session) {
+  dotaid <- reactive({
+    req(input$dota2ID)
+    input$dota2ID
+  })
+
+  output$match <- renderText({
+    paste("the match ID is ", input$matchID)
+  }) #end matchid renderText
+
+  output$account <- renderText({
+    paste("the dota2 account ID is ", input$dota2ID)
+  }) #end dota2id renderText
+
+  output$WinLosePlot <- renderPlot(
+    win_lose_plot(dotaid())
+  )
+
+} #end of server
+
+shinyApp(ui, server)
