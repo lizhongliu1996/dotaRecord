@@ -14,6 +14,7 @@
 #'
 #'
 win_lose_plot<-function(dota2ID){
+    ###total win
     win_lose<-count_player_win_lose(dota2ID)
     winlose <- data.frame(status=c("win", "lose"),
                      number=c(win_lose[[1]], win_lose[[2]]))
@@ -31,4 +32,9 @@ win_lose_plot<-function(dota2ID){
       labs(title = titles, subtitle = subtitles) +
       geom_text(aes(label=number), vjust=1.6, size=10) +
       guides(fill=FALSE)
+
+
+
+
+
 }

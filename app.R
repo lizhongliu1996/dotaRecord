@@ -18,7 +18,9 @@ ui <- fluidPage(
   verbatimTextOutput("account"),
 
   mainPanel(
-    column(6, plotOutput("WinLosePlot", height = 250))
+    column(5, plotOutput("WinLosePlot", height = 250)),
+    column(5, plotOutput("RadiantPlot", height = 250)),
+    column(5, plotOutput("DirePlot", height = 250))
     )  # end of mainPanel
 
 ) #end of ui
@@ -39,6 +41,14 @@ server <- function(input, output, session) {
 
   output$WinLosePlot <- renderPlot(
     win_lose_plot(dotaid())
+  )
+
+  output$RadiantPlot <- renderPlot(
+    radiant_plot(dotaid())
+  )
+
+  output$DirePlot <- renderPlot(
+    dire_plot(dotaid())
   )
 
 } #end of server
