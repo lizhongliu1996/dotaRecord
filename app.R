@@ -20,7 +20,8 @@ ui <- fluidPage(
   mainPanel(
     column(5, plotOutput("WinLosePlot", height = 250)),
     column(5, plotOutput("RadiantPlot", height = 250)),
-    column(5, plotOutput("DirePlot", height = 250))
+    column(5, plotOutput("DirePlot", height = 250)),
+    column(8, plotOutput("HeroRankPlot", height = 300))
     )  # end of mainPanel
 
 ) #end of ui
@@ -50,6 +51,11 @@ server <- function(input, output, session) {
   output$DirePlot <- renderPlot(
     dire_plot(dotaid())
   )
+
+  output$HeroRankPlot <- renderPlot(
+    hero_rank(dotaid())
+  )
+
 
 } #end of server
 
