@@ -18,11 +18,18 @@ ui <- fluidPage(
   verbatimTextOutput("account"),
 
   mainPanel(
-    column(5, plotOutput("WinLosePlot", height = 250)),
-    column(5, plotOutput("RadiantPlot", height = 250)),
-    column(5, plotOutput("DirePlot", height = 250)),
-    column(8, plotOutput("HeroRankPlot", height = 300))
-    )  # end of mainPanel
+    fluidRow(
+      column(6, plotOutput("WinLosePlot", height = 250)) # notice the ,
+    ), #end of this fluidRow notice comma needed before the next fluidRow()
+    fluidRow(
+      column(6, plotOutput("RadiantPlot", height = 250)),
+      column(5, plotOutput("DirePlot", height = 250)) # notice the ,
+    ), #end of this fluidRow notice comma needed before the next fluidRow()
+    fluidRow(
+      column(8, plotOutput("HeroRankPlot", height = 300)) # notice the ,
+    ) #end of this fluidRow notice comma needed before the next fluidRow()
+
+  )  # end of mainPanel
 
 ) #end of ui
 
