@@ -26,7 +26,7 @@ radiant_plot<-function(dota2ID){
   rad_winlose[2,2]<-(rad_win[2,2]-rad_win[1,2])
   names(rad_winlose)<-c("status","number")
 
-  rad_titles<-c("Radiant win/lose graph is below")
+  rad_titles<-c("Team radiant win/lose graph is below")
   rad_subtitles<-paste("your win rate in radiant is", round_rad_p)
   rad_status<-as.data.frame(rad_winlose$status)
   rad_number<-as.data.frame(rad_winlose$number)

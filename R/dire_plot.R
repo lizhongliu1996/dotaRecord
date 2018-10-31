@@ -27,7 +27,7 @@ dire_plot<-function(dota2ID){
   dire_winlose[2,2]<-(dire_win[2,2]-dire_win[1,2])
   names(dire_winlose)<-c("status","number")
 
-  dire_titles<-c("dire win/lose graph is below")
+  dire_titles<-c("Team dire win/lose graph is below")
   dire_subtitles<-paste("your win rate in dire is", round_dire_p)
   dire_status<-as.data.frame(dire_winlose$status)
   dire_number<-as.data.frame(dire_winlose$number)
