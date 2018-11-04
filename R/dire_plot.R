@@ -12,7 +12,6 @@
 #'
 #'
 #'
-
 dire_plot<-function(dota2ID){
   ###win in dire
   winIndifside<-count_in_categories(dota2ID)
