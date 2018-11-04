@@ -23,7 +23,7 @@ hero_rank<-function(dota2ID){
   newdata<-herosrank[order(-herosrank$percent_rank),]
   newdata$percent_rank<-paste(round(100*newdata$percent_rank, 2), "%")
 
-  titles<-c("The graph is below your top 10 ranked heroes")
+  titles<-c("The graph shows your top 10 ranked heroes among players worldwide")
 
   ggplot(data=newdata,aes(y=newdata$percent_rank, x=newdata$hero_name, fill=newdata$hero_name)) +
     geom_bar(stat="identity")+

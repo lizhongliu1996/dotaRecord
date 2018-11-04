@@ -23,10 +23,10 @@ ui <- fluidPage(
     ), #end of this fluidRow notice comma needed before the next fluidRow()
     fluidRow(
       column(6, plotOutput("RadiantPlot", height = 250)),
-      column(5, plotOutput("DirePlot", height = 250)) # notice the ,
+      column(6, plotOutput("DirePlot", height = 250)) # notice the ,
     ), #end of this fluidRow notice comma needed before the next fluidRow()
     fluidRow(
-      column(8, plotOutput("HeroRankPlot", height = 300)) # notice the ,
+      column(10, plotOutput("HeroRankPlot", height = 400)) # notice the ,
     ) #end of this fluidRow notice comma needed before the next fluidRow()
 
   )  # end of mainPanel
@@ -39,6 +39,11 @@ server <- function(input, output, session) {
     input$dota2ID
   })
 
+  matchid <- reactive({
+    req(input$matchID)
+    input$matchID
+  })
+
   output$match <- renderText({
     paste("the match ID is ", input$matchID)
   }) #end matchid renderText
@@ -49,19 +54,20 @@ server <- function(input, output, session) {
 
   output$WinLosePlot <- renderPlot(
     win_lose_plot(dotaid())
-  )
+  ) #end winlose renderPlot
 
   output$RadiantPlot <- renderPlot(
     radiant_plot(dotaid())
-  )
+  ) #end radiantwin renderPlot
 
   output$DirePlot <- renderPlot(
     dire_plot(dotaid())
-  )
+  ) #end direwin renderPlot
 
   output$HeroRankPlot <- renderPlot(
     hero_rank(dotaid())
-  )
+  ) #end herorank renderPlot
+
 
 
 } #end of server

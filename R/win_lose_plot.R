@@ -22,7 +22,7 @@ win_lose_plot<-function(dota2ID){
     p<-winlose[1,2]/(winlose[1,2]+winlose[2,2])
     roundp<-paste(round(100*p, 2), "%")
 
-    titles<-c("Your dota2 win/lose graph is below")
+    titles<-c("Your total dota2 win/lose graph is below")
     subtitles<-paste("winning rate is", roundp)
     status<-as.data.frame(winlose$status)
     number<-as.data.frame(winlose$number)
