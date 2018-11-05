@@ -26,7 +26,7 @@ ui <- fluidPage(
       column(6, plotOutput("DirePlot", height = 250)) # notice the ,
     ), #end of this fluidRow notice comma needed before the next fluidRow()
     fluidRow(
-      column(10, plotOutput("HeroRankPlot", height = 400)) # notice the ,
+      column(10, plotOutput("HeroRankPlot", height = 500)) # notice the ,
     ) #end of this fluidRow notice comma needed before the next fluidRow()
 
   )  # end of mainPanel

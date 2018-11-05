@@ -3,7 +3,7 @@
 #' @param dota2ID your dota2 account ID
 #'
 #' @return NULL
-#' @import ggplot2 ROpenDota
+#' @importfrom ggplot2 ROpenDota
 #'
 #' @export
 #'
@@ -33,7 +33,7 @@ radiant_plot<-function(dota2ID){
 
   ggplot(data=rad_winlose,aes(x=rad_winlose$status, y=rad_winlose$number, fill=rad_winlose$status)) +
     geom_bar(stat="identity") +
-    labs(title = rad_titles, subtitle = rad_subtitles) +
+    labs(title = rad_titles, subtitle = rad_subtitles, x="Number",y="Status") +
     geom_text(aes(label=rad_winlose$number), vjust=1.6, size=10) +
     guides(fill=FALSE)
 }
