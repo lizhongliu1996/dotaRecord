@@ -3,7 +3,7 @@
 #' @param matchID a dota2 match ID
 #'
 #' @return NULL
-#' @importfrom ggplot2 ROpenDota
+#' @import ggplot2 ROpenDota
 #'
 #' @export
 #'
