@@ -5,4 +5,5 @@ This package have functions that can analyse your dota2 id in rstudio, also you 
 
 
 # Install development version from GitHub
+input below code in R Console
 devtools::install_github("lizhongliu1996/dotaRecord")
