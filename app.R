@@ -19,6 +19,9 @@ ui <- fluidPage(
   verbatimTextOutput("account"),
 
   mainPanel(
+    fluidRow(
+      column(12, span(textOutput('match_wins'),style="color:red;font-size: 50px")) # notice the ,
+    ), #end of this fluidRow notice comma needed before the next fluidRow()
 
     fluidRow(
       column(12, dataTableOutput('match_detail')) # notice the ,
@@ -59,9 +62,13 @@ server <- function(input, output, session) {
     match_details(matchid())
   ) #end match_details renderTable
 
+  output$match_wins <- renderText(
+    match_wins(matchid())
+  ) #end match_wins renderText
+
   #output$mmr <- renderText({
-  #  paste("the game id is ", getmmr(dotaid())$GameID),
-  #  paste("with mmr score ", getmmr(dotaid())$MMR_score)
+   # paste("the game id is ", getmmr(dotaid())$GameID),
+   #  paste("with mmr score ", getmmr(dotaid())$MMR_score)
   #})
 
   output$account <- renderText({

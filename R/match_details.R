@@ -1,4 +1,4 @@
-#' This function returns a data frame shows player information about a specifical match when passed match id
+#' This function returns a data frame shows player information about a specifical match when passed a match id
 #'
 #' @param matchID a dota2 match ID
 #'
@@ -27,6 +27,8 @@ match_details<-function(matchID){
   heroInfo$player_name<-a$players$personaname
   heroInfo$account_id<-a$players$account_id
   heroInfo$team<-matrix(c(rep("Radiant",5),rep("Dire",5)))
+  heroInfo$status<-a$players$win
+  heroInfo$status<-ifelse(heroInfo$status==1,"win","lose")
   heroInfo$levels<-a$players$level
   heroInfo$kills<-a$players$kills
   heroInfo$deaths<-a$players$deaths
@@ -35,9 +37,12 @@ match_details<-function(matchID){
   heroInfo$last_hits<-a$players$last_hits
   heroInfo$denies<-a$players$denies
   heroInfo$gold_per_min<-a$players$gold_per_min
+  heroInfo$total_gold<-a$players$total_gold
   heroInfo$xp_per_min<-a$players$xp_per_min
+  heroInfo$total_xp<-a$players$total_xp
   heroInfo$hero_damage<-a$players$hero_damage
   heroInfo$tower_damage<-a$players$tower_damage
+  heroInfo$hero_heal<-a$players$hero_healing
 
   return(heroInfo)
 }
