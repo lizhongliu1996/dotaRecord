@@ -7,7 +7,8 @@ library(dotaRecord)
 ui <- fluidPage(
 
   h1("This is a shiny webpage to get your dota2 information!"),
-  p("you can input your match ID or your 9 digit dota2 ID"),
+  p("you can input your match ID or your dota2 ID"),
+
 
   textInput("matchID", label = h3("Please input match ID"), value = NULL),
   submitButton("confirm", icon("confirm")),
@@ -18,15 +19,21 @@ ui <- fluidPage(
   verbatimTextOutput("account"),
 
   mainPanel(
+
     fluidRow(
-      column(6, plotOutput("WinLosePlot", height = 250)) # notice the ,
+      column(12, dataTableOutput('match_detail')) # notice the ,
+    ), #end of this fluidRow notice comma needed before the next fluidRow()
+
+    fluidRow(
+      column(8, plotOutput("WinLosePlot", height = 380)),
+      column(4, textOutput("mmr"))# notice the ,
     ), #end of this fluidRow notice comma needed before the next fluidRow()
     fluidRow(
-      column(6, plotOutput("RadiantPlot", height = 250)),
-      column(6, plotOutput("DirePlot", height = 250)) # notice the ,
+      column(6, plotOutput("RadiantPlot", height = 320)),
+      column(6, plotOutput("DirePlot", height = 320)) # notice the ,
     ), #end of this fluidRow notice comma needed before the next fluidRow()
     fluidRow(
-      column(10, plotOutput("HeroRankPlot", height = 500)) # notice the ,
+      column(12, plotOutput("HeroRankPlot", height = 600)) # notice the ,
     ) #end of this fluidRow notice comma needed before the next fluidRow()
 
   )  # end of mainPanel
@@ -47,6 +54,15 @@ server <- function(input, output, session) {
   output$match <- renderText({
     paste("the match ID is ", input$matchID)
   }) #end matchid renderText
+
+  output$match_detail <- renderDataTable(
+    match_details(matchid())
+  ) #end match_details renderTable
+
+  #output$mmr <- renderText({
+  #  paste("the game id is ", getmmr(dotaid())$GameID),
+  #  paste("with mmr score ", getmmr(dotaid())$MMR_score)
+  #})
 
   output$account <- renderText({
     paste("the dota2 account ID is ", input$dota2ID)
