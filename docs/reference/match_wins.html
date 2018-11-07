@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>This function tells your top-rank heroes when passed dota2 id — hero_rank • dotaRecord</title>
+<title>Helper function that shows information about a specficial match when passed match id — match_wins • dotaRecord</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="This function tells your top-rank heroes when passed dota2 id — hero_rank" />
+<meta property="og:title" content="Helper function that shows information about a specficial match when passed match id — match_wins" />
 
-<meta property="og:description" content="This function tells your top-rank heroes when passed dota2 id" />
+<meta property="og:description" content="Helper function that shows information about a specficial match when passed match id" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -97,32 +97,31 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>This function tells your top-rank heroes when passed dota2 id</h1>
-    <small class="dont-index">Source: <a href='https://github.com/lizhongliu1996/dotaRecord/blob/master/R/hero_rank.R'><code>R/hero_rank.R</code></a></small>
-    <div class="hidden name"><code>hero_rank.Rd</code></div>
+    <h1>Helper function that shows information about a specficial match when passed match id</h1>
+    <small class="dont-index">Source: <a href='https://github.com/lizhongliu1996/dotaRecord/blob/master/R/match_wins.R'><code>R/match_wins.R</code></a></small>
+    <div class="hidden name"><code>match_wins.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>This function tells your top-rank heroes when passed dota2 id</p>
+    <p>Helper function that shows information about a specficial match when passed match id</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>hero_rank</span>(<span class='no'>dota2ID</span>)</pre>
+    <pre class="usage"><span class='fu'>match_wins</span>(<span class='no'>matchID</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>dota2ID</th>
-      <td><p>your dota2 account ID</p></td>
+      <th>matchID</th>
+      <td><p>a dota2 match ID</p></td>
     </tr>
     </table>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>hero_rank</span>(<span class='fl'>135474549</span>)</div><div class='img'><img src='hero_rank-1.png' alt='' width='700' height='433' /></div><div class='input'>
-
+    <pre class="examples"><div class='input'><span class='fu'>match_wins</span>(<span class='fl'>4172245371</span>)</div><div class='output co'>#&gt; [1] "Team dire win this game!"</div><div class='input'>
 
 </div></pre>
   </div>

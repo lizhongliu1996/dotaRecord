@@ -1,14 +1,14 @@
-#' Helper function that shows information about a specficial when passed match id
+#' Helper function that shows information about a specficial match when passed match id
 #'
 #' @param matchID a dota2 match ID
 #'
 #' @return NULL
-#' @import ggplot2 ROpenDota
+#' @import ROpenDota
 #'
 #' @export
 #'
 #' @examples
-#' match_describe(4172245371)
+#' match_wins(4172245371)
 #'
 #'
 match_wins<-function(matchID){

@@ -3,7 +3,7 @@
 #' @param dota2ID your dota2 account ID
 #'
 #' @return NULL
-#' @import ggplot2 ROpenDota
+#' @import ROpenDota
 #'
 #' @export
 #'

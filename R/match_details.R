@@ -1,29 +1,28 @@
-#' Helper function that shows information about a specficial when passed match id
+#' This function returns a data frame shows player information about a specifical match when passed match id
 #'
 #' @param matchID a dota2 match ID
 #'
 #' @return NULL
-#' @import ggplot2 ROpenDota tidyverse
+#' @import ROpenDota
 #'
 #' @export
 #'
 #' @examples
-#' match_results(4172245371)
+#' match_details(4172245371)
 #'
 #'
 #'
-match_results<-function(matchID){
+match_details<-function(matchID){
+  matchID=4172245371
   a<-get_match_details(matchID)
-
-
-  ###get what heros inside this game
   heroInfo<-as.data.frame(a$players$hero_id)
   names(heroInfo)<-c("hero_id")
   hero<-get_heroes()
   q<-hero[,1] %in% heroInfo$hero_id
   hero_name<-hero[q,1:3]
+  hero_name<-hero_name[order(match(hero_name$id,heroInfo$hero_id)),]
   colnames(hero_name)<-c("hero_id","full name","hero name")
-  heroInfo<-left_join(heroInfo,hero_name,by="hero_id")
+
   heroInfo <- hero_name["hero name"]
 
   heroInfo$player_name<-a$players$personaname
@@ -41,6 +40,5 @@ match_results<-function(matchID){
   heroInfo$hero_damage<-a$players$hero_damage
   heroInfo$tower_damage<-a$players$tower_damage
 
-
-
+  return(heroInfo)
 }
