@@ -13,7 +13,6 @@
 #'
 #'
 match_details<-function(matchID){
-  matchID=4172245371
   a<-get_match_details(matchID)
   heroInfo<-as.data.frame(a$players$hero_id)
   names(heroInfo)<-c("hero_id")
