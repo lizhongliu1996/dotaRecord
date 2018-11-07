@@ -29,7 +29,7 @@ win_lose_plot<-function(dota2ID){
 
     ggplot(data=winlose, aes(x=status, y=number, fill= status)) +
       geom_bar(stat="identity")+
-      labs(title = titles, subtitle = subtitles) +
+      labs(title = titles, subtitle = subtitles, x="Number",y="Status") +
       geom_text(aes(label=number), vjust=1.6, size=10) +
       guides(fill=FALSE)
 

@@ -33,7 +33,7 @@ dire_plot<-function(dota2ID){
 
   ggplot(data=dire_winlose,aes(x=dire_winlose$status, y=dire_winlose$number, fill=dire_winlose$status)) +
     geom_bar(stat="identity")+
-    labs(title = dire_titles, subtitle = dire_subtitles) +
+    labs(title = dire_titles, subtitle = dire_subtitles, x="Number",y="Status") +
     geom_text(aes(label=dire_winlose$number), vjust=1.6, size=10) +
     guides(fill=FALSE)
 
