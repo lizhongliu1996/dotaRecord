@@ -66,10 +66,15 @@ server <- function(input, output, session) {
     match_wins(matchid())
   ) #end match_wins renderText
 
-  #output$mmr <- renderText({
-   # paste("the game id is ", getmmr(dotaid())$GameID),
-   #  paste("with mmr score ", getmmr(dotaid())$MMR_score)
-  #})
+  output$mmr <- renderText({
+    paste("the game id is " ,
+        unlist(get_mmr(dotaid())["GameID"]),
+        "with mmr score ",
+        get_mmr(dotaid())["MMR_score"]
+        )
+  })
+
+  # 105248644
 
   output$account <- renderText({
     paste("the dota2 account ID is ", input$dota2ID)
