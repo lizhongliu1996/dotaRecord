@@ -20,7 +20,7 @@ ui <- fluidPage(
 
   mainPanel(
     fluidRow(
-      column(12, span(textOutput('match_wins'),style="color:red;font-size: 50px")) # notice the ,
+      column(12, textOutput("match_wins"),style="color:red;font-size: 50px") # notice the ,
     ), #end of this fluidRow notice comma needed before the next fluidRow()
 
     fluidRow(
@@ -29,14 +29,14 @@ ui <- fluidPage(
 
     fluidRow(
       column(8, plotOutput("WinLosePlot", height = 380)),
-      column(4, textOutput("mmr"))# notice the ,
+      column(4, textOutput("mmr"),style="font-size: 30px")# notice the ,
     ), #end of this fluidRow notice comma needed before the next fluidRow()
     fluidRow(
       column(6, plotOutput("RadiantPlot", height = 320)),
       column(6, plotOutput("DirePlot", height = 320)) # notice the ,
     ), #end of this fluidRow notice comma needed before the next fluidRow()
     fluidRow(
-      column(12, plotOutput("HeroRankPlot", height = 600)) # notice the ,
+      column(12, plotOutput("HeroRankPlot", height = 650)) # notice the ,
     ) #end of this fluidRow notice comma needed before the next fluidRow()
 
   )  # end of mainPanel
@@ -63,18 +63,16 @@ server <- function(input, output, session) {
   ) #end match_details renderTable
 
   output$match_wins <- renderText(
-    match_wins(matchid())
+    paste(match_wins(matchid()))
   ) #end match_wins renderText
 
   output$mmr <- renderText({
-    paste("the game id is " ,
+    paste("Your game ID is " ,
         unlist(get_mmr(dotaid())["GameID"]),
         "with mmr score ",
         get_mmr(dotaid())["MMR_score"]
         )
   })
-
-  # 105248644
 
   output$account <- renderText({
     paste("the dota2 account ID is ", input$dota2ID)
