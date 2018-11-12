@@ -29,6 +29,12 @@ hero_rank<-function(dota2ID){
     geom_bar(stat="identity")+
     labs(title = titles, x="Hero rank in global players",y="Hero names") +
     coord_flip()+
-    geom_text(aes(label=newdata$percent_rank), vjust=0, size=4)
+    geom_text(aes(label=newdata$percent_rank), vjust=0, size=4) +
+    theme(
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_rect(fill = "transparent",colour = NA),
+      plot.background = element_rect(fill = "transparent",colour = NA)
+    )
 
 }

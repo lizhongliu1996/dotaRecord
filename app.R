@@ -1,10 +1,12 @@
 library(shiny)
+library(shinyWidgets)
 library(dotaRecord)
 
 
 
 
 ui <- fluidPage(
+  setBackgroundImage(src = "https://images.wallpaperscraft.com/image/dota_2_art_logo_94802_1920x1080.jpg"),
 
   h1("This is a shiny webpage to get your dota2 information!"),
   p("you can input your match ID or your dota2 ID"),
@@ -78,21 +80,21 @@ server <- function(input, output, session) {
     paste("the dota2 account ID is ", input$dota2ID)
   }) #end dota2id renderText
 
-  output$WinLosePlot <- renderPlot(
+  output$WinLosePlot <- renderPlot({
     win_lose_plot(dotaid())
-  ) #end winlose renderPlot
+  },bg="transparent") #end winlose renderPlot
 
-  output$RadiantPlot <- renderPlot(
+  output$RadiantPlot <- renderPlot({
     radiant_plot(dotaid())
-  ) #end radiantwin renderPlot
+    },bg="transparent") #end radiantwin renderPlot
 
-  output$DirePlot <- renderPlot(
+  output$DirePlot <- renderPlot({
     dire_plot(dotaid())
-  ) #end direwin renderPlot
+  },bg="transparent") #end direwin renderPlot
 
-  output$HeroRankPlot <- renderPlot(
+  output$HeroRankPlot <- renderPlot({
     hero_rank(dotaid())
-  ) #end herorank renderPlot
+  },bg="transparent") #end herorank renderPlot
 
 
 

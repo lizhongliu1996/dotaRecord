@@ -35,5 +35,11 @@ radiant_plot<-function(dota2ID){
     geom_bar(stat="identity") +
     labs(title = rad_titles, subtitle = rad_subtitles, x="Number",y="Status") +
     geom_text(aes(label=rad_winlose$number), vjust=1.6, size=10) +
-    guides(fill=FALSE)
+    guides(fill=FALSE) +
+    theme(
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_rect(fill = "transparent",colour = NA),
+      plot.background = element_rect(fill = "transparent",colour = NA)
+    )
 }
