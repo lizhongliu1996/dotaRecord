@@ -6,14 +6,12 @@ library(dotaRecord)
 
 
 ui <- fluidPage(
-  tags$head(
-    tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap.css")
-  ),
+  tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap.css")),
 
   setBackgroundImage(src = "dota_2.jpg"),
 
   h1("This is a shiny webpage to get your dota2 information!"),
-  p("you can input your match ID or your dota2 ID"),
+  p("You can input your match ID or your dota2 ID"),
 
 
   textInput("matchID", label = h3("Please input match ID"), value = NULL),
@@ -61,7 +59,7 @@ server <- function(input, output, session) {
   })
 
   output$match <- renderText({
-    paste("the match ID is ", matchid())
+    paste("The match ID is ", matchid())
   }) #end matchid renderText
 
   output$match_detail <- renderDataTable(
@@ -81,7 +79,7 @@ server <- function(input, output, session) {
   })
 
   output$account <- renderText({
-    paste("the dota2 account ID is ", dotaid())
+    paste("The dota2 account ID is ", dotaid())
   }) #end dota2id renderText
 
   output$WinLosePlot <- renderPlot({

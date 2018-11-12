@@ -1,6 +1,6 @@
 Package: dotaRecord
 Type: Package
-Title: analyse your dota2 accout data
+Title: Analyse your dota2 Accout data
 Version: 0.1.1
 Authors@R: (person("Lizhong", "Liu", email = "lxl816@miami.edu", role = c("aut","cre")))
 Maintainer: Lizhong Liu <lxl816@miami.edu>
