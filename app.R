@@ -1,3 +1,4 @@
+install.packages("devtools")
 devtools::install_github("lizhongliu1996/dotaRecord")
 library(shiny)
 library(dotaRecord)
