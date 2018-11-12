@@ -27,7 +27,7 @@ hero_rank<-function(dota2ID){
 
   ggplot(data=newdata,aes(y=newdata$percent_rank, x=newdata$hero_name, fill=newdata$hero_name)) +
     geom_bar(stat="identity")+
-    labs(title = titles, x="Hero rank in global players",y="Hero names") +
+    labs(title = titles, y="Hero rank in global players",x="Hero names") +
     coord_flip()+
     geom_text(aes(label=newdata$percent_rank), vjust=0, size=4) +
     theme(
@@ -35,6 +35,7 @@ hero_rank<-function(dota2ID){
       panel.grid.minor = element_blank(),
       panel.background = element_rect(fill = "transparent",colour = NA),
       plot.background = element_rect(fill = "transparent",colour = NA)
-    )
+    ) +
+    guides(fill=FALSE)
 
 }

@@ -6,18 +6,22 @@ library(dotaRecord)
 
 
 ui <- fluidPage(
-  setBackgroundImage(src = "https://images.wallpaperscraft.com/image/dota_2_art_logo_94802_1920x1080.jpg"),
+  tags$head(
+    tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap.css")
+  ),
+
+  setBackgroundImage(src = "dota_2.jpg"),
 
   h1("This is a shiny webpage to get your dota2 information!"),
   p("you can input your match ID or your dota2 ID"),
 
 
   textInput("matchID", label = h3("Please input match ID"), value = NULL),
-  submitButton("confirm", icon("confirm")),
+  submitButton("confirm1", icon("confirm")),
   verbatimTextOutput("match"),
 
   textInput("dota2ID", label = h3("Please input your dota2 account ID"), value = NULL ),
-  submitButton("confirm", icon("confirm")),
+  submitButton("confirm2", icon("confirm")),
   verbatimTextOutput("account"),
 
   mainPanel(
@@ -31,14 +35,14 @@ ui <- fluidPage(
 
     fluidRow(
       column(8, plotOutput("WinLosePlot", height = 380)),
-      column(4, textOutput("mmr"),style="font-size: 30px")# notice the ,
+      column(4, textOutput("mmr"),style="color:black;font-size: 30px")# notice the ,
     ), #end of this fluidRow notice comma needed before the next fluidRow()
     fluidRow(
       column(6, plotOutput("RadiantPlot", height = 320)),
       column(6, plotOutput("DirePlot", height = 320)) # notice the ,
     ), #end of this fluidRow notice comma needed before the next fluidRow()
     fluidRow(
-      column(12, plotOutput("HeroRankPlot", height = 650)) # notice the ,
+      column(12, plotOutput("HeroRankPlot", height = 800)) # notice the ,
     ) #end of this fluidRow notice comma needed before the next fluidRow()
 
   )  # end of mainPanel
@@ -57,7 +61,7 @@ server <- function(input, output, session) {
   })
 
   output$match <- renderText({
-    paste("the match ID is ", input$matchID)
+    paste("the match ID is ", matchid())
   }) #end matchid renderText
 
   output$match_detail <- renderDataTable(
@@ -77,7 +81,7 @@ server <- function(input, output, session) {
   })
 
   output$account <- renderText({
-    paste("the dota2 account ID is ", input$dota2ID)
+    paste("the dota2 account ID is ", dotaid())
   }) #end dota2id renderText
 
   output$WinLosePlot <- renderPlot({
