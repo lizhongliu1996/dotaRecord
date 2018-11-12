@@ -1,15 +1,15 @@
 Package: dotaRecord
 Type: Package
-Title: Analyse your dota2 Accout data
-Version: 0.1.1
-Authors@R: (person("Lizhong", "Liu", email = "lxl816@miami.edu", role = c("aut","cre")))
+Title: Analyse your Dota2 Accout Data
+Version: 1.1.1
+Authors@R: person("Lizhong", "Liu", email = "lxl816@miami.edu", role = c("aut","cre"))
 Maintainer: Lizhong Liu <lxl816@miami.edu>
-Description: This is a package to analyse your dota2 data.
+Description: This is a package to analyse your Dota2 data.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 2.10)
 RoxygenNote: 6.1.0
 Imports: ROpenDota, ggplot2
-URL: https://github.com/lizhongliu1996/dotaRecord, https://lizhongliu1996.shinyapps.io/dotarecord/
+URL: https://github.com/lizhongliu1996/dotaRecord
 BugReports: https://github.com/lizhongliu1996/dotaRecord/issues
