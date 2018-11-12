@@ -1,6 +1,6 @@
 Package: dotaRecord
 Type: Package
-Title: Analyse your Dota2 Accout Data
+Title: Analyse your Dota2 Account Data
 Version: 1.1.1
 Authors@R: person("Lizhong", "Liu", email = "lxl816@miami.edu", role = c("aut","cre"))
 Maintainer: Lizhong Liu <lxl816@miami.edu>
@@ -10,6 +10,6 @@ Encoding: UTF-8
 LazyData: true
 Depends: R (>= 2.10)
 RoxygenNote: 6.1.0
-Imports: ROpenDota, ggplot2
+Imports: ROpenDota, ggplot2, curl
 URL: https://github.com/lizhongliu1996/dotaRecord
 BugReports: https://github.com/lizhongliu1996/dotaRecord/issues
