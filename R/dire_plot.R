@@ -1,5 +1,6 @@
-#' dire plot Helper function that draws a bar chart when passed dota2 id
-#' shows your winning rate in team dire
+#' dire plot Helper function that draws a bar chart to show
+#' your winning rate in team dire when passed dota2 id
+#'
 #' @param dota2ID your dota2 account ID
 #'
 #' @return NULL

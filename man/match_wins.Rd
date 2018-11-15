@@ -2,7 +2,7 @@
 % Please edit documentation in R/match_wins.R
 \name{match_wins}
 \alias{match_wins}
-\title{Helper function that shows information about a specficial match when passed match id}
+\title{Helper function that shows winning information about a specficial match when passed match id}
 \usage{
 match_wins(matchID)
 }
@@ -10,7 +10,7 @@ match_wins(matchID)
 \item{matchID}{a dota2 match ID}
 }
 \description{
-Helper function that shows information about a specficial match when passed match id
+Helper function that shows winning information about a specficial match when passed match id
 }
 \examples{
 match_wins(4172245371)

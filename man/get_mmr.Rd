@@ -2,7 +2,8 @@
 % Please edit documentation in R/get_mmr.R
 \name{get_mmr}
 \alias{get_mmr}
-\title{get_mmr function returns a dataframe with your nickname and matchmaking rate score when passed dota2 id}
+\title{get_mmr function returns a dataframe with your nickname
+ and matchmaking rate score when passed dota2 id}
 \usage{
 get_mmr(dota2ID)
 }
@@ -10,7 +11,8 @@ get_mmr(dota2ID)
 \item{dota2ID}{your dota2 account ID}
 }
 \description{
-get_mmr function returns a dataframe with your nickname and matchmaking rate score when passed dota2 id
+get_mmr function returns a dataframe with your nickname
+ and matchmaking rate score when passed dota2 id
 }
 \examples{
 get_mmr(135474549)

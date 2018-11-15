@@ -1,5 +1,5 @@
-
-#' win_lose_plot Helper function that draws a bar chart when passed dota2 id
+#' win_lose_plot Helper function that draws a bar chart to
+#' show your total winning rate when passed dota2 id
 #'
 #' @param dota2ID your dota2 account ID
 #'
@@ -23,7 +23,7 @@ win_lose_plot<-function(dota2ID){
     roundp<-paste(round(100*p, 2), "%")
 
     titles<-c("Your total dota2 win/lose graph is below")
-    subtitles<-paste("winning rate is", roundp)
+    subtitles<-paste("total winning rate is", roundp)
     status<-as.data.frame(winlose$status)
     number<-as.data.frame(winlose$number)
 

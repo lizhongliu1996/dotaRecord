@@ -2,7 +2,8 @@
 % Please edit documentation in R/match_details.R
 \name{match_details}
 \alias{match_details}
-\title{This function returns a data frame shows player information about a specifical match when passed a match id}
+\title{This function returns a data frame shows player information
+ about a specifical match when passed a match id}
 \usage{
 match_details(matchID)
 }
@@ -10,7 +11,8 @@ match_details(matchID)
 \item{matchID}{a dota2 match ID}
 }
 \description{
-This function returns a data frame shows player information about a specifical match when passed a match id
+This function returns a data frame shows player information
+ about a specifical match when passed a match id
 }
 \examples{
 match_details(4172245371)

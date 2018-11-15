@@ -1,4 +1,5 @@
-#' This function returns a data frame shows player information about a specifical match when passed a match id
+#' This function returns a data frame shows player information
+#'  about a specifical match when passed a match id
 #'
 #' @param matchID a dota2 match ID
 #'

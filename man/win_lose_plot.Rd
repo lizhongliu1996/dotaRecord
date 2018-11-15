@@ -2,7 +2,8 @@
 % Please edit documentation in R/win_lose_plot.R
 \name{win_lose_plot}
 \alias{win_lose_plot}
-\title{win_lose_plot Helper function that draws a bar chart when passed dota2 id}
+\title{win_lose_plot Helper function that draws a bar chart to
+show your total winning rate when passed dota2 id}
 \usage{
 win_lose_plot(dota2ID)
 }
@@ -10,7 +11,8 @@ win_lose_plot(dota2ID)
 \item{dota2ID}{your dota2 account ID}
 }
 \description{
-win_lose_plot Helper function that draws a bar chart when passed dota2 id
+win_lose_plot Helper function that draws a bar chart to
+show your total winning rate when passed dota2 id
 }
 \examples{
 win_lose_plot(135474549)

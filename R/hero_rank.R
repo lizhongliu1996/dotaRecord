@@ -1,4 +1,5 @@
-#' This function tells your top-rank heroes when passed dota2 id
+#' This function tells your top-10-rank heroes among dota2
+#' players around whole world when passed dota2 id
 #'
 #' @param dota2ID your dota2 account ID
 #'

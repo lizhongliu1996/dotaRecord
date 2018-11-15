@@ -1,4 +1,4 @@
-#' Helper function that shows information about a specficial match when passed match id
+#' Helper function that shows winning information about a specficial match when passed match id
 #'
 #' @param matchID a dota2 match ID
 #'

@@ -2,8 +2,8 @@
 % Please edit documentation in R/radiant_plot.R
 \name{radiant_plot}
 \alias{radiant_plot}
-\title{radiant plot Helper function that draws a bar chart when passed dota2 id
-shows your winning rate in team radiant}
+\title{radiant plot Helper function that draws a bar chart to shows
+your winning rate in team radiant when passed dota2 id}
 \usage{
 radiant_plot(dota2ID)
 }
@@ -11,8 +11,8 @@ radiant_plot(dota2ID)
 \item{dota2ID}{your dota2 account ID}
 }
 \description{
-radiant plot Helper function that draws a bar chart when passed dota2 id
-shows your winning rate in team radiant
+radiant plot Helper function that draws a bar chart to shows
+your winning rate in team radiant when passed dota2 id
 }
 \examples{
 radiant_plot(135474549)

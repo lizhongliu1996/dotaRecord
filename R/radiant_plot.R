@@ -1,5 +1,6 @@
-#' radiant plot Helper function that draws a bar chart when passed dota2 id
-#' shows your winning rate in team radiant
+#' radiant plot Helper function that draws a bar chart to shows
+#' your winning rate in team radiant when passed dota2 id
+#'
 #' @param dota2ID your dota2 account ID
 #'
 #' @return NULL

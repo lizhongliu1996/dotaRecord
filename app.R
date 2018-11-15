@@ -15,11 +15,11 @@ ui <- fluidPage(
 
 
   textInput("matchID", label = h3("Please input match ID"), value = NULL),
-  submitButton("confirm1", icon("confirm")),
+  submitButton("confirm", icon("confirm")),
   verbatimTextOutput("match"),
 
   textInput("dota2ID", label = h3("Please input your dota2 account ID"), value = NULL ),
-  submitButton("confirm2", icon("confirm")),
+  submitButton("confirm", icon("confirm")),
   verbatimTextOutput("account"),
 
   mainPanel(

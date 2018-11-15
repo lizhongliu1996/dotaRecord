@@ -1,4 +1,5 @@
-#' get_mmr function returns a dataframe with your nickname and matchmaking rate score when passed dota2 id
+#' get_mmr function returns a dataframe with your nickname
+#'  and matchmaking rate score when passed dota2 id
 #'
 #' @param dota2ID your dota2 account ID
 #'

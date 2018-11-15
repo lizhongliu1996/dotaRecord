@@ -2,8 +2,8 @@
 % Please edit documentation in R/dire_plot.R
 \name{dire_plot}
 \alias{dire_plot}
-\title{dire plot Helper function that draws a bar chart when passed dota2 id
-shows your winning rate in team dire}
+\title{dire plot Helper function that draws a bar chart to show
+your winning rate in team dire when passed dota2 id}
 \usage{
 dire_plot(dota2ID)
 }
@@ -11,8 +11,8 @@ dire_plot(dota2ID)
 \item{dota2ID}{your dota2 account ID}
 }
 \description{
-dire plot Helper function that draws a bar chart when passed dota2 id
-shows your winning rate in team dire
+dire plot Helper function that draws a bar chart to show
+your winning rate in team dire when passed dota2 id
 }
 \examples{
 dire_plot(135474549)
