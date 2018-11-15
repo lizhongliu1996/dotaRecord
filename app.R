@@ -14,11 +14,11 @@ ui <- fluidPage(
   p("You can input your match ID or your dota2 ID"),
 
 
-  textInput("matchID", label = h3("Please input match ID(for example:4172245371)"), value = NULL),
+  textInput("matchID", label = h3("Please input match ID(example:4172245371)"), value = NULL),
   submitButton("confirm", icon("confirm")),
   verbatimTextOutput("match"),
 
-  textInput("dota2ID", label = h3("Please input your dota2 account ID(for example:135474549)"), value = NULL ),
+  textInput("dota2ID", label = h3("Please input your dota2 account ID(example:135474549)"), value = NULL ),
   submitButton("confirm", icon("confirm")),
   verbatimTextOutput("account"),
 
