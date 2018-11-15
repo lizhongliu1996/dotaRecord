@@ -8,7 +8,7 @@ library(dotaRecord)
 ui <- fluidPage(
   tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap.css")),
 
-  setBackgroundImage(src = "dota_2.jpg"),
+  setBackgroundImage(src = "https://images.wallpaperscraft.com/image/dota_2_art_logo_94802_1920x1080.jpg"),
 
   h1("This is a shiny webpage to get your dota2 information!"),
   p("You can input your match ID or your dota2 ID"),
