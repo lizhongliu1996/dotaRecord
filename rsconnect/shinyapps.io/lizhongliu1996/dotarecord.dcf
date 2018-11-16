@@ -5,9 +5,9 @@ account: lizhongliu1996
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 541407
-bundleId: 1702896
+bundleId: 1704780
 url: https://lizhongliu1996.shinyapps.io/dotarecord/
-when: 1542305975.9773
+when: 1542386436.04128
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: _pkgdown.yml|.Rbuildignore|DESCRIPTION|NAMESPACE|README.md|www/bootstrap.css|www/dota_2.jpg|docs|man|R

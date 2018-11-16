@@ -6,7 +6,7 @@ library(dotaRecord)
 
 
 ui <- fluidPage(
-  tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap.css")),
+  tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "https://bootswatch.com/4/cerulean/bootstrap.css")),
 
   setBackgroundImage(src = "https://images.wallpaperscraft.com/image/dota_2_art_logo_94802_1920x1080.jpg"),
 
