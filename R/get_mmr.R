@@ -12,7 +12,6 @@
 #' get_mmr(135474549)
 #'
 #'
-#'
 get_mmr<-function(dota2ID){
    e<-get_player_summaries(dota2ID)
    score<-as.data.frame(e$mmr_estimate$estimate)
